@@ -108,7 +108,7 @@
     "Country": "Northern Mariana Islands",
     "Photos": [
       {
-        "Url": "https://randomuser.me/api/portraits/man/21.jpg",
+        "Url": "https://randomuser.me/api/portraits/men/21.jpg",
         "IsMain": true
       }
     ]
@@ -127,7 +127,7 @@
     "Country": "Lesotho",
     "Photos": [
       {
-        "Url": "https://randomuser.me/api/portraits/man/29.jpg",
+        "Url": "https://randomuser.me/api/portraits/men/29.jpg",
         "IsMain": true
       }
     ]
@@ -146,7 +146,7 @@
     "Country": "Syria",
     "Photos": [
       {
-        "Url": "https://randomuser.me/api/portraits/man/14.jpg",
+        "Url": "https://randomuser.me/api/portraits/men/14.jpg",
         "IsMain": true
       }
     ]
@@ -165,7 +165,7 @@
     "Country": "Gambia",
     "Photos": [
       {
-        "Url": "https://randomuser.me/api/portraits/man/99.jpg",
+        "Url": "https://randomuser.me/api/portraits/men/99.jpg",
         "IsMain": true
       }
     ]
@@ -184,7 +184,7 @@
     "Country": "Nigeria",
     "Photos": [
       {
-        "Url": "https://randomuser.me/api/portraits/man/54.jpg",
+        "Url": "https://randomuser.me/api/portraits/men/54.jpg",
         "IsMain": true
       }
     ]

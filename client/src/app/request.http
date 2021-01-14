@@ -1,0 +1,19 @@
+POST https://localhost:5001/api/account/login
+content-type: application/json
+
+{
+	"username": "ann",
+	"password": "Pa$$w0rd"
+}
+
+###
+
+GET https://localhost:5001/api/users
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJhbm4iLCJuYmYiOjE2MTA1NjQ0OTgsImV4cCI6MTYxMTE2OTI5OCwiaWF0IjoxNjEwNTY0NDk4fQ.TatHD2ZMIpOZshkzHJ3aiLIfW8NHqgSpDfAz24jl-PKfJUDa_s1PhzDCr6pFGDJzUXOv2UVbsfV-P_F9d3Pyfg
+
+###
+
+GET https://localhost:5001/api/users/ann
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJhbm4iLCJuYmYiOjE2MTA2MzExMjIsImV4cCI6MTYxMTIzNTkyMiwiaWF0IjoxNjEwNjMxMTIyfQ.VCPKfDgEoNKPM7v_X8ADtN1Y7LkKDnhJDQr37SloZf7mATlSnahEscXJzw78ZUljURU4hYASp4lM6ijMRo-4pQ
