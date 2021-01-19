@@ -1,8 +1,8 @@
+import { Member } from './../../_models/member';
 import { Photo } from './../../_models/photo';
 import { MembersService } from './../../_services/members.service';
 import { take } from 'rxjs/operators';
 import { User } from './../../_models/user';
-import { Member } from './../../_models/member';
 import { Component, Input, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { AccountService } from '../../_services/account.service';
@@ -68,8 +68,13 @@ export class PhotoEditorComponent implements OnInit {
 
     this.uploader.onSuccessItem = (item, response, status, headers) => {
       if (response) {
-        const photo = JSON.parse(response);
+        const photo: Photo = JSON.parse(response);
         this.member.photos.push(photo);
+        if (photo.isMain) {
+          this.user.photoUrl = photo.url;
+          this.member.photoUrl= photo.url;
+          this.accountService.setCurrentUser(this.user);
+        }
       }
     }
   }
