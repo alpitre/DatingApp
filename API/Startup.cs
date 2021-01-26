@@ -1,10 +1,10 @@
 using API.Extensions;
 using API.Middleware;
+using API.SignalR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 
 namespace API
@@ -30,12 +30,13 @@ namespace API
             builder
               .AllowAnyHeader()
               .AllowAnyMethod()
+              .AllowCredentials()
               .WithOrigins("https://localhost:4200");
           });
       });
 
-
       services.AddIdentityServices(_config);
+      services.AddSignalR();
 
       services.AddSwaggerGen(c =>
       {
@@ -59,6 +60,8 @@ namespace API
       app.UseEndpoints(endpoints =>
       {
         endpoints.MapControllers();
+        endpoints.MapHub<PresenceHub>("hubs/presence");
+        endpoints.MapHub<MessageHub>("hubs/message");
       });
     }
   }
