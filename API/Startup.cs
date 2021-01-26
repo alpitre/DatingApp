@@ -48,7 +48,7 @@ namespace API
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
     {
       app.UseMiddleware<ExceptionMiddleware>();
-      
+
       app.UseHttpsRedirection();
 
       app.UseRouting();
@@ -57,11 +57,15 @@ namespace API
       app.UseAuthentication();
       app.UseAuthorization();
 
+      app.UseDefaultFiles();
+      app.UseStaticFiles();
+
       app.UseEndpoints(endpoints =>
       {
         endpoints.MapControllers();
         endpoints.MapHub<PresenceHub>("hubs/presence");
         endpoints.MapHub<MessageHub>("hubs/message");
+        endpoints.MapFallbackToController("Index", "Fallback");
       });
     }
   }
